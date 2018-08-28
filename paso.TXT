@@ -1,0 +1,5 @@
+SELECT aa.rfc,aa.curp,bb.clave,bb.pagot,bb.pagot-bb.pago4 as resta,bb.monto ;
+	FROM C:\RESPADO\sistemas\nomofici\NOMI17\maes1712 aa ;
+	LEFT JOIN C:\RESPADO\sistemas\nomofici\NOMI17\nomi1712 bb ;
+	ON aa.jpp+STR(aa.num,6)=bb.jpp+STR(bb.numjpp,6);
+	WHERE bb.clave>=220 AND !INLIST(bb.clave,221,226,227) ORDER BY aa.rfc,bb.clave 
